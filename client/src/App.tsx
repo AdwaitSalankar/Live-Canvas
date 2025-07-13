@@ -3,7 +3,7 @@ import  { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Board from "./pages/Board";
 import Home from "./pages/Home";
-import Howto from "./pages/Howto";
+import Howto from "./pages/howto";
 
 function App() {
   // const user = JSON.parse(localStorage.getItem("profile"));
