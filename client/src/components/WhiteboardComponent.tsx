@@ -168,9 +168,9 @@ const Board: React.FC<MyBoard> = ({ brushColor, brushSize, handleUuid }) => {
             Download Snapshot
           </a>
         )}
-        <button onClick={clearCanvas} className="clear-button">
+        {/* <button onClick={clearCanvas} className="clear-button">
           Clear Board
-        </button>
+        </button> */}
       </div>
 
       {/* Image Upload & Processing */}
