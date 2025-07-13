@@ -12,7 +12,7 @@
 
 const { Server } = require("socket.io");
 const io = new Server({
-  cors: "https://collab-board-delta.vercel.app/",
+  cors: "https://livecanvas.vercel.app/",
 });
 
 io.on("connection", function (socket) {

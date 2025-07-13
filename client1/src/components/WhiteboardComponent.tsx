@@ -110,6 +110,15 @@ const Board: React.FC<MyBoard> = ({ brushColor, brushSize, handleUuid }) => {
   };
   const resetSnapshot = () => setSnapshotURL(null);
 
+  const clearCanvas = () => {
+  const canvas = canvasRef.current;
+  const ctx = canvas?.getContext("2d");
+  if (ctx) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    socket?.emit("canvasImage", canvas.toDataURL()); // Sync with others
+    }
+  };
+
   // Image Upload & Processing
   const [image, setImage] = useState<File | null>(null);
   const [processedImage, setProcessedImage] = useState<string | null>(null);
@@ -150,21 +159,24 @@ const Board: React.FC<MyBoard> = ({ brushColor, brushSize, handleUuid }) => {
         style={{ backgroundColor: "black" }}
         className="rounded-[4rem]"
       />
-      <div className="flex flex-row items-center justify-center gap-3 mt-6">
-        <button onClick={takeSnapshot} className="bg-green-600 rounded-lg py-2 px-3 text-white">
+      <div className="flex flex-row items-center justify-center gap-3 mt-6 ">
+        <button onClick={takeSnapshot} className="take-snapshot-button">
           Take Snapshot
         </button>
         {snapshotURL && (
-          <a href={snapshotURL} download={`CanvasSnapshot_${CollabID}`} className="bg-green-600 rounded-lg py-2 px-3 text-white">
+          <a href={snapshotURL} download={`CanvasSnapshot_${CollabID}`} className="download-snapshot-button">
             Download Snapshot
           </a>
         )}
+        <button onClick={clearCanvas} className="clear-button">
+          Clear Board
+        </button>
       </div>
 
       {/* Image Upload & Processing */}
       <div className="mt-6 flex flex-col items-center">
         <input type="file" onChange={handleImageChange} className="mb-4" />
-        <button onClick={handleSubmit} className="bg-blue-600 rounded-lg py-2 px-3 text-white">
+        <button onClick={handleSubmit} className="process-image-button">
           Process Image
         </button>
       </div>

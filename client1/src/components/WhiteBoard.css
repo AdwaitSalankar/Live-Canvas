@@ -25,3 +25,52 @@
   height: 16px;
   margin-right: 4px;
 }
+
+.take-snapshot-button {
+  background-color: #3ea842;
+  color: #ffffff;
+  padding: 9px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.take-snapshot-button:hover {
+  background-color: #288b28;
+}
+
+.download-snapshot-button {
+  background-color: #3ea842;
+  color: #ffffff;
+  padding: 9px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.download-snapshot-button:hover {
+  background-color: #288b28;
+}
+
+.clear-button {
+  background-color: #c92323;
+  color: #ffffff;
+  padding: 9px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.clear-button:hover {
+  background-color: #a41f1f;
+}
+
+.process-image-button {
+  background-color: #5b5bfd;
+  color: #ffffff;
+  padding: 9px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.process-image-button:hover {
+  background-color: #4a4adf;
+}

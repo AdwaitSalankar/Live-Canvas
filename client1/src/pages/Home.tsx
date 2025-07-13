@@ -5,22 +5,35 @@ import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-900 to bg-gray-900">
+    <div className="home-container">
       <Helmet>
         <meta
           name="google-site-verification"
           content="LTEslH9dKKs5wwLu8JhLPM4jiI1qE-M05wJUK2eKZnU"
         />
       </Helmet>
-      <h1 className="Heading text-blue text-center">
-        COLLABORATIVE WHITEBOARD
-      </h1>
-      <div className="justify-center items-center flex my-auto min-h-[100vh]">
-        <a href="/board" target="_blank" style={{ textDecoration: "none" }}>
-          <button className="px-8 py-4 rounded-[20px] bg-cyan-600 text-black font-semibold text-[30px]">
-            Start Board
-          </button>
-        </a>
+
+      <nav className="nav-bar">
+        <div className="logo flex items-center gap-2">
+          <img src="/logo2.png" alt="Logo" className="h-8 w-8" />
+          <span className="highlight">LiveCanvas</span>
+        </div>
+        <div className="nav-links">
+          <a href="/howto" className="question"><b>?</b></a>
+          <a href="https://github.com/AdwaitSalankar/Live-Canvas" target="_blank" className="github-button">Github</a>
+        </div>
+      </nav>
+
+      <div className="content">
+        <div className="badge">✨ Real-time Collaboration Board</div>
+        <h1 className="main-heading">
+          The Live Canvas board<br/> <span className="highlight-blue">for collaboration.</span>
+        </h1>
+        <p className="subtext">
+          LiveCanvas lets you collaborate in real-time with others on a shared drawing board — powered by Socket.IO and OCR.
+        </p>
+        <a href="/board" target="_blank" className="cta-button">Start Board 🡪</a>
+        <p className="note-text">Draw. Collaborate. Create.</p>
       </div>
     </div>
   );
