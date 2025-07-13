@@ -13,7 +13,7 @@ const CanvasDrawing = () => {
   const urlRef = useRef<HTMLDivElement | null>(null);
   const [copied, setCopied] = useState(false);
   
-  const baseUrl = "https://livecanvas.vercel.app/board";
+  const baseUrl = "https://livecanvas-collab.vercel.app/board";
   const url = baseUrl + "?roomID=" + uuid;
 
   return (
