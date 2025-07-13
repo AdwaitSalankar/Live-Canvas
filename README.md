@@ -5,6 +5,11 @@ Developed a real-time collaborative whiteboard platform integrating Tesseract OC
 - Enabled multi-user interaction and synchronized drawing/text updates across clients in real time using Socket.IO
 - Designed shareable session URLs, ensuring private collaboration spaces for users.
 
+---
+<img width="1919" height="968" alt="Screenshot 2025-07-13 232207" src="https://github.com/user-attachments/assets/1af0474a-fedf-42ce-909b-e63d85a9acc4" />
+
+---
+
 # TechStack
 
 - **Frontend**: React.js / Next.js (for an interactive UI)  
